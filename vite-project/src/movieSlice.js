@@ -76,7 +76,9 @@ const movieSlice = createSlice({
       const index = state.movies.findIndex(
         (movie) => movie.id === action.payload.id
       );
-      state.movies[index] = action.payload;
+      if (index !== -1) {
+        state.movies[index] = { ...state.movies[index], ...action.payload };
+      }
     },
   },
 });
