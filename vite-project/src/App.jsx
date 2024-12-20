@@ -1,7 +1,12 @@
 import "./App.css";
+import MovieList from "./components/MovieList";
 
 function App() {
-  return <>ylm</>;
+  return (
+    <>
+      <MovieList />
+    </>
+  );
 }
 
 export default App;
